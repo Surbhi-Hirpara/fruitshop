@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Farm Kiosk - 100% Fresh and organic</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.ico" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Farm Fresh Logo">
+        <h2>Farm Fresh Kiosk</h2>
+        <h3>100% fresh and organic</h3>
+    </header>
+    <section id="orderSection">
+        <table id="orderSummary">
+            <thead>
+                <tr>
+                    <td id="name" style="font-size: larger; font-weight: 100;"></td>
+                    <td colspan="2" id="customerName" style="font-size: larger; font-weight: 100;"></td>
+                </tr>
+                <tr >
+                    <td id="dashed1" colspan="3"></td>
+                </tr>
+                <tr>
+                    <th id="productName">  </th>
+                    <th id="productQuantity"> </th>
+                    <th id="totalPrice"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="productCabbage"></td>
+                    <td id="totalCabbageQuantity"></td>
+                    <td id="totalCabbagePrice"></td>
+                </tr>
+                <tr>
+                    <td id="productLettuce"></td>
+                    <td id="totalLettuceQuantity"></td>
+                    <td id="totalLettucePrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPumpkin"></td>
+                    <td id="totalPumpkinQuantity"></td>
+                    <td id="totalPumpkinPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productWatermelon"></td>
+                    <td id="totalWatermelonQuantity"></td>
+                    <td id="totalWatermelonPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPapaya"></td>
+                    <td id="totalPapayaQuantity"></td>
+                    <td id="totalPapayaPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPineapple"></td>
+                    <td id="totalPineappleQuantity"></td>
+                    <td id="totalPineapplePrice"></td>
+                </tr>
+                <tr >
+                    <td id="dashed" colspan="3"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr> 
+                    <td colspan="2" id="Taxes"></td>
+                    <td id="totalTaxes"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="gst"></td>
+                    <td id="totalGst"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="totalBill"></td>
+                    <td id="totalBillSummary"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- <table id="orderSummary">
+            <thead>
+                <tr>
+                    <td id="name" style="font-size: larger; font-weight: 100;"></td>
+                    <td colspan="2" id="customerName" style="font-size: larger; font-weight: 100;"></td>
+                </tr>
+                <tr >
+                    <td id="dashed1" colspan="3"></td>
+                </tr>
+                <tr>
+                    <th id="productName">  </th>
+                    <th id="productQuantity"> </th>
+                    <th id="totalPrice"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="productCabbage"></td>
+                    <td id="totalCabbageQuantity"></td>
+                    <td id="totalCabbagePrice"></td>
+                </tr>
+                <tr>
+                    <td id="productLettuce"></td>
+                    <td id="totalLettuceQuantity"></td>
+                    <td id="totalLettucePrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPumpkin"></td>
+                    <td id="totalPumpkinQuantity"></td>
+                    <td id="totalPumpkinPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productWatermelon"></td>
+                    <td id="totalWatermelonQuantity"></td>
+                    <td id="totalWatermelonPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPapaya"></td>
+                    <td id="totalPapayaQuantity"></td>
+                    <td id="totalPapayaPrice"></td>
+                </tr>
+                <tr>
+                    <td id="productPineapple"></td>
+                    <td id="totalPineappleQuantity"></td>
+                    <td id="totalPineapplePrice"></td>
+                </tr>
+                <tr >
+                    <td id="dashed" colspan="3"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr> 
+                    <td colspan="2" id="Taxes"></td>
+                    <td id="totalTaxes"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="gst"></td>
+                    <td id="totalGst"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="totalBill"></td>
+                    <td id="totalBillSummary"></td>
+                </tr>
+            </tfoot>
+        </table> -->
+    </section>
+    <section id="mainSection">
+        <h1>Product List</h1>
+        <table id="productList">
+            <tr id="block1">
+                <td id="blockCabbage">
+                    <div class="quantity"><p id="availableQuantityCabbage">s</p></div>
+                    <img src="img/cabbage.png" alt="Cabbage Image">
+                    <h4>
+                        Fresh Cabbage
+                    </h4>
+                    <h5>
+                        $4.99
+                    </h5>
+                    <button id="btnCabbage" name="btnCabbage" class="addToCart" onclick="btnCabbageClick()" >Add to Basket</button>
+                </td>
+                <td id="blockLettuce">
+                    <div class="quantity"><p id="availableQuantityLettuce"></p></div>
+                    <img src="img/lettuce.png" alt="Lettuce Image">
+                    <h4>
+                        Fresh Lettuce
+                    </h4>
+                    <h5>
+                        $2.99
+                    </h5>
+                    <button id="btnLettuce" name="btnLettuce" class="addToCart" onclick="btnLettuceClick()" >Add to Basket</button>
+                </td>
+                <td id="blockPumkin">
+                    <div class="quantity"><p id="availableQuantityPumpkin"></p></div>
+                    <img src="img/pumpkin.png" alt="Pumpkin Image">
+                    <h4>
+                        Pumpkin
+                    </h4>
+                    <h5>
+                        $3.99
+                    </h5>
+                    <button id="btnPumpkin" name="btnPumpkin" class="addToCart" onclick="btnPumpkinClick()" >Add to Basket</button>
+                </td>
+            </tr>
+            <tr id="block2">
+                <td id="blockWatermelon">
+                    <div class="quantity"><p id="availableQuantityWatermelon"></p></div>
+                    <img src="img/watermelon.png" alt="Watermelon Image" ><h4>
+                        Fresh Watermelon
+                    </h4>
+                    <h5>
+                        $7.99
+                    </h5>
+                    <button id="btnWatermelon" name="btnWatermelon" class="addToCart" onclick="btnWatermelonClick()" >Add to Basket</button>
+                </td>
+                <td id="blockPapaya">
+                    <div class="quantity"><p id="availableQuantityPapaya"></p></div>
+                    <img src="img/papaya.png" alt="Papaya Image" >
+                    <h4>
+                        Organic Papaya
+                    </h4>
+                    <h5>
+                        $4.99
+                    </h5>
+                    <button id="btnPapaya" name="btnPapaya" class="addToCart" onclick="btnPapayaClick()" >Add to Basket</button>
+                </td>
+                <td id="blockPineapple">
+                    <div class="quantity"><p id="availableQuantityPineapple"></p></div>
+                    <img src="img/pineapple.png" alt="Pineapple Image" >
+                    <h4>
+                        Fresh Pineapple
+                    </h4>
+                    <h5>
+                        $3.96
+                    </h5>
+                    <button id="btnPineapple" name="btnPineapple" class="addToCart" onclick="btnPineappleClick()" >Add to Basket</button>
+                </td>
+            </tr>
+        </table>
+        <p class="checkoutSection">
+            <button id="btnConfirmOrder" onclick="btnCheckOut()" name="btnConfirmOrder">Confirm Order</button>
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2022 Surbhi Hirpara</p>
+    </footer>
+</body>
+</html>
+<script>
+    (function() {
+        updateQuantity();
+        document.getElementById("orderSection").style.visibility = "hidden";
+    })();
+</script>
